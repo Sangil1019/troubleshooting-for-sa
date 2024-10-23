@@ -13,14 +13,15 @@ spec:
       labels:
         app: "troubleshooting-app"
     spec:
-      tolerations: [] 
+      tolerations:
+      - key: taint-test
+        operator: Equal
+        value: taint-value
+        effect: NoSchedule
       containers:
         - name: "troubleshooting-app"
           image: cepgbaseacr.azurecr.io/troubleshooting:latest
           resources:
-            requests:
-              memory: "128Mi"
-              cpu: "250m"
             limits:
-              memory: "256Mi"
-              cpu: "500m"
+              memory: 800Mi
+              cpu: 1
