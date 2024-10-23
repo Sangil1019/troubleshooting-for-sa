@@ -23,5 +23,5 @@ spec:
           image: cepgbaseacr.azurecr.io/troubleshooting:latest
           resources:
             limits:
-              memory: 512Mi  # 리소스 제한을 할당량에 맞게 조정
+              memory: 512Mi
               cpu: 500m
